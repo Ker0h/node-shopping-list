@@ -2,13 +2,13 @@ $(document).ready(function(){
 
     $('form').on('submit', function(){
 
-        var item = $('form input');
-        var todo = {item: item.val()};
+        var input = $('form input');
+        var product = {name: input.val()};
 
         $.ajax({
             type: 'POST',
             url: '/products',
-            data: todo,
+            data: product,
             success: function(data){
                 //do something with the data via front-end framework
                 location.reload();
@@ -20,10 +20,10 @@ $(document).ready(function(){
     });
 
     $('li').on('click', function(){
-        var item = $(this).text().replace(/ /g, "-");
+        let product = $(this).text().replace(/ /g, "-");
         $.ajax({
             type: 'DELETE',
-            url: '/products/' + item,
+            url: '/products/' + product,
             success: function(data){
                 //do something with the data via front-end framework
                 location.reload();
