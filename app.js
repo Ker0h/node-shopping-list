@@ -7,6 +7,6 @@ app.use('/', require('./shopping_routes/routes'));
 
 app.set('view engine', 'ejs');
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`Listening to port ${port}`);
 });
