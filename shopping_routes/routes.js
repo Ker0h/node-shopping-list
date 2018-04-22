@@ -14,21 +14,21 @@ let Product = mongoose.model('Product', productSchema);
 
 let urlencodedParser = bodyParser.urlencoded({extended:false});
 
-router.get('/products', (req, res) => {
+router.get('/', (req, res) => {
     Product.find({}, (err, data) => {
         if (err) throw err;
         res.render('shopping_list', {products: data});
     });
 });
 
-router.post('/products', urlencodedParser, (req, res) => {
+router.post('/', urlencodedParser, (req, res) => {
     let newProduct = Product(req.body).save((err, data) => {
         if (err) throw err;
         res.json(data);
     });
 });
 
-router.delete('/products/:product', (req, res) => {
+router.delete('/:product', (req, res) => {
     Product.find({name: req.params.product.replace(/\-/g, " ")}).remove((err, data) => {
         if (err) throw err;
         res.json(data);

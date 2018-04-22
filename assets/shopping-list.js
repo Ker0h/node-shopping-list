@@ -2,12 +2,12 @@ $(document).ready(function(){
 
     $('form').on('submit', function(){
 
-        var input = $('form input');
-        var product = {name: input.val()};
+        let input = $('form input');
+        let product = {name: input.val()};
 
         $.ajax({
             type: 'POST',
-            url: '/products',
+            url: '/',
             data: product,
             success: function(data){
                 //do something with the data via front-end framework
@@ -23,7 +23,7 @@ $(document).ready(function(){
         let product = $(this).text().replace(/ /g, "-");
         $.ajax({
             type: 'DELETE',
-            url: '/products/' + product,
+            url: '/' + product,
             success: function(data){
                 //do something with the data via front-end framework
                 location.reload();
