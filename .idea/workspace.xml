@@ -182,7 +182,7 @@
       <workItem from="1524382547805" duration="841000" />
       <workItem from="1524424550581" duration="903000" />
       <workItem from="1524425982923" duration="635000" />
-      <workItem from="1524488669928" duration="146000" />
+      <workItem from="1524488669928" duration="746000" />
     </task>
     <task id="LOCAL-00001" summary="Improved routing">
       <created>1524425042897</created>
@@ -195,7 +195,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17181000" />
+    <option name="totallyTimeSpent" value="17781000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1382" height="754" extended-state="6" />
